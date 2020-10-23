@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="OpenSpecialCardAccountRequest">
+		<xs:annotation>
+			<xs:documentation>Запрос на открытие специального карточного счета</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MdmOrgId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Идентификатор МДМ ЮЛ</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="CheckingAccountNumber" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Номер расчетного счета</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="CardProductCode" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Код карточного продукта</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="RequestId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Идентификатор заявки для соотнесения с ответом и для возможности запроса ее статуса. Генерируется на стороне СУБО.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
